@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do App</title>
+
+    <!-- font awesome cdn  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- font -->
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <div class="blurryBg"></div>
+      <div class="container">
+        <div id="takeInput" class="takeInput">
+          <input
+            type="text"
+            name="taskToAdd"
+            id="taskToAdd"
+            placeholder="Add task ..."
+            autocomplete="off"
+          />
+          <textarea
+            name="newTaskDiscription"
+            id="newTaskDiscription"
+            cols="30"
+            rows="5"
+            placeholder="Description..."
+          ></textarea>
+          <button id="addTask">Add Task</button>
+        </div>
+        <!-- ERROR MESSAGE -->
+        <p id="error">Input cannot be empty!</p>
+        <!-- TASK LIST -->
+        <div class="taskList" id="tasks">
+          <p class="pendingTasks" id="pendingTasks">
+            <span class="task-count">0</span> task(s) to be completed !
+          </p>
+          <!-- list of tasks -->
+          <ul id="mainTaskList">
+            <!-- demo task starts -->
+            <!-- <li>
+              <div class="task">
+                <input type="checkbox" class="task-check" />
+                <span class="taskname">${taskname}</span>
+                <span class="taskname">taskname</span>
+                <span class="discription">discription</span>
+                <button
+                  class="edit-task"
+                  style="background: transparent; border: none"
+                >
+                  <i class="fa-regular fa-pen-to-square fa-2x"></i>
+                </button>
+                <button
+                  class="delete"
+                  style="background: transparent; border: none"
+                >
+                  <i class="fa-regular fa-trash-can fa-2x"></i>
+                </button>
+              </div>
+            </li> -->
+            <!-- demo task ends -->
+          </ul>
+        </div>
+      </div>
+      <div class="socials">
+        <div class="icons linkedin">
+          <a href="https://www.linkedin.com/in/abhisheksuwalka/">
+            <img src="./assets/images/linkedin.png" alt="linkedin icon" />
+          </a>
+        </div>
+        <div class="icons twitter">
+          <a href="https://twitter.com/maik0z">
+            <img src="./assets/images/twitter.png" alt="twitter icon" />
+          </a>
+        </div>
+        <div class="icons fb">
+          <a href="https://github.com/Abhisheksuwalka">
+            <img src="./assets/images/github-logo.png" alt="github icon" />
+          </a>
+        </div>
+        <div class="icons yt">
+          <a href="https://www.youtube.com/@abhisheksuwalka2487">
+            <img src="./assets/images/youtube.png" alt="youtube icon" />
+          </a>
+        </div>
+        <div class="icons theme" id="changeTheme">
+          <img src="./assets/images/change-mode.png" alt="change mode icon" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+  </body>
+</html>
