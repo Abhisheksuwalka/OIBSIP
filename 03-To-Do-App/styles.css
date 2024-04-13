@@ -14,6 +14,7 @@
   --tile-height: 2px;
   --tile-width: min(70vw, 800px);
   --tile-bg: #f1f8fb;
+  --done-tile-bg: rgba(241, 248, 251, 0.55);
   --tile-verticle-margin: 2px;
   --tile-padding: 1vw;
   --tile-padding-right: 1.5vw;

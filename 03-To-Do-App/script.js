@@ -81,16 +81,19 @@ const addTask = () => {
 
   const taskCheck = document.querySelectorAll(".task-check");
   taskCheck.forEach((checkBox) => {
-    checkBox.onchange = () => {
+    checkBox.onchange = (e) => {
       checkBox.nextElementSibling.classList.toggle("completed");
       if (checkBox.checked) {
+        e.target.parentNode.style.background = "var(--done-tile-bg)";
         taskCount -= 1;
         console.log("bye");
       } else {
+        e.target.parentNode.style.background = "var(--tile-bg)";
         taskCount += 1;
         console.log("hi");
       }
       displayCount(taskCount);
+      targetElement.parentNode.style.back;
     };
   });
   newTaskInput.value = "";
