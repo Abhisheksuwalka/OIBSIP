@@ -16,7 +16,7 @@
   --socials-bg: #4c8bc8;
 }
 .dark-theme {
-  --calculator-bg: #140d00;
+  --calculator-bg: #42270057;
   --primary-color: #281a01;
   --secondary-color: #3c2601;
   --third-color: #503302;
@@ -25,6 +25,12 @@
   --html-bg: #281a01;
   --socials-bg: #ffd182;
 }
+/* when clicked */
+/* :root {
+  --primary-color-clicked: var(--secondary-color);
+  --secondary-color-clicked: var(--third-color);
+  --third-color-clicked: var(--primary-color);
+} */
 
 .container {
   height: 100vh;
@@ -57,7 +63,6 @@
   align-items: center;
   justify-content: center;
   background-color: var(--primary-color);
-
   border-radius: 1000px;
   border: 0px solid black;
 }
@@ -72,6 +77,33 @@
   background-color: var(--third-color);
   color: var(--calculator-bg);
   grid-column: span 2;
+}
+.dark-theme .equalTo {
+  color: var(--font-color);
+}
+
+/* design When keys are pressed  */
+.keys.clicked {
+  background-color: var(--secondary-color);
+  color: var(--secondary-font-color);
+}
+.topRow.clicked,
+.operators.clicked,
+.dot.clicked {
+  background-color: var(--third-color);
+  color: var(--calculator-bg);
+}
+.dark-theme .topRow.clicked,
+.dark-theme .operators.clicked,
+.dark-theme .dot.clicked {
+  color: var(--font-color);
+}
+
+.equalTo.clicked {
+  background-color: var(--primary-color);
+}
+.dark-theme .equalTo.clicked {
+  color: red;
 }
 
 /* FOR BIG SCREENS */
