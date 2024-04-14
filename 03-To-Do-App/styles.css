@@ -215,7 +215,7 @@ li {
 
   display: grid;
   grid-template-columns: 0.5fr 3fr 8fr 0.7fr 0.7fr;
-  grid-template-rows: 1fr;
+  grid-template-rows: auto;
   grid-column-gap: 10px;
   align-content: baseline;
 }
@@ -226,10 +226,12 @@ li {
 }
 
 .task > .taskname {
+  word-break: break-word;
   padding-left: 0.5vw;
   align-self: center;
 }
 .task > .discription {
+  word-break: break-word;
   text-align: center;
   align-self: center;
 }
@@ -240,7 +242,7 @@ li {
 @media only screen and (min-width: 600px) {
   .socials {
     position: absolute;
-    right: 0;
+    right: 0.2vw;
     margin: var(--border-radius);
     justify-self: end;
     display: flex;
@@ -248,7 +250,6 @@ li {
     background-color: rgba(255, 255, 255, 0.3);
     align-self: center;
     padding: 0.2vw;
-    margin-right: 0.2vw;
     box-shadow: var(--constant-shadow);
     border-radius: 5vw;
   }
@@ -258,7 +259,7 @@ li {
 }
 
 /* FOR MOBILES AND TABLETS */
-@media only screen and (max-width: 599px) and (min-height: 720px) {
+@media only screen and (max-width: 599px) {
   * {
     font-size: large;
   }
@@ -272,11 +273,15 @@ li {
     padding: 4%;
   }
   .takeInput > input {
+    max-width: 54vw;
     height: auto;
+  }
+  .takeInput > textarea {
+    max-width: 54vw;
   }
 
   .takeInput button {
-    /* height: 6.5em; */
+    font-size: medium;
     grid-column: 2;
     grid-row: 1 / span 2;
     padding: 7%;
@@ -285,24 +290,44 @@ li {
   }
 
   .task {
-    grid-template-rows: 1fr 1fr;
+    padding-top: 2%;
+    display: grid;
+    width: 80vw;
+    max-width: 80vw;
+    grid-template-rows: auto auto;
+    /* grid-template-columns: 0.5fr auto; */
     grid-template-columns: 0.5fr 3fr 0.5fr 0.5fr;
   }
   .task > .task-check {
+    grid-row: 0 / span 3;
+    grid-column: 0;
+    justify-self: center;
+    align-self: center;
     height: 2vh;
     width: auto;
   }
+  .task > .taskname {
+    word-break: break-word;
+  }
   .task > .discription {
+    white-space: normal;
     grid-row: 2;
     grid-column: 1 / span 4;
+    word-break: break-word;
+    max-width: 70vw;
+  }
+  .task > button > i {
+    font-size: x-large;
   }
 
   .socials {
     display: flex;
     flex-flow: row wrap;
+    justify-content: center;
     position: absolute;
     top: min(1vw, 1vh);
-    right: min(20vw, 20vh);
+    right: 25vw;
+    left: 25vw;
     background-color: rgba(255, 255, 255, 0.3);
     box-shadow: var(--constant-shadow);
     border-radius: var(--border-radii);

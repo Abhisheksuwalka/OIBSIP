@@ -58,7 +58,7 @@ const addTask = () => {
       if (!thisDivCheckBox.checked) {
         taskCount -= 1;
       }
-      button.parentNode.remove();
+      button.parentNode.parentNode.remove();
       displayCount(taskCount);
     };
   });
@@ -86,14 +86,11 @@ const addTask = () => {
       if (checkBox.checked) {
         e.target.parentNode.style.background = "var(--done-tile-bg)";
         taskCount -= 1;
-        console.log("bye");
       } else {
         e.target.parentNode.style.background = "var(--tile-bg)";
         taskCount += 1;
-        console.log("hi");
       }
       displayCount(taskCount);
-      targetElement.parentNode.style.back;
     };
   });
   newTaskInput.value = "";
