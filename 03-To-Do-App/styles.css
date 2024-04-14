@@ -185,6 +185,7 @@ i {
   padding: var(--tile-padding);
   border-radius: var(--border-radii);
   box-shadow: var(--tile-shadow);
+  text-align: center;
 }
 
 #error {
@@ -196,6 +197,7 @@ i {
   padding: var(--tile-padding);
   border-radius: var(--border-radii);
   box-shadow: var(--tile-shadow);
+  text-align: center;
 }
 
 /* The main part TASK - LIST */
