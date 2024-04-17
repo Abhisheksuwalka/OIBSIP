@@ -1,0 +1,529 @@
+/* // <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 100 to 900
+
+.exo-2-<uniquifier > {
+  font-family: "Exo 2", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+} */
+/* .exo-2-<uniquifier > {
+  font-family: "Exo 2", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+} */
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: "Exo 2", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+a {
+  color: inherit;
+}
+
+.sr-only {
+  position: absolute;
+  /* width: 1px; */
+  /* height: 1px; */
+  /* padding: 0; */
+  /* margin: -1px; */
+  /* overflow: hidden; */
+  clip: rect(0, 0, 0, 0);
+  /* white-space: nowrap; */
+  /* border: 0; */
+}
+
+header {
+  /* height: 47px; */
+  font-size: large;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+header > button {
+  display: none;
+  color: azure;
+  background-color: aquamarine;
+  border: none;
+}
+
+nav > button {
+  display: none;
+}
+
+nav {
+  position: fixed;
+  top: 0px;
+  background-color: rgba(256, 256, 256, 0.5);
+  align-content: center;
+  justify-content: center;
+}
+nav > .overlay-content {
+  font-size: larger;
+  width: 100vw;
+  display: inline-flex;
+  gap: 3vw;
+  justify-content: flex-end;
+}
+.overlay-content a {
+  padding: 8px;
+  background-color: rgba(256, 256, 256, 0.5);
+}
+.overlay-content a:hover {
+  /* font-size: larger; */
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+main {
+  z-index: -1;
+}
+.main-heading {
+  background-image: url(./assets/images/ssr-bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  margin-top: 4vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: black;
+  font-size: xx-large;
+}
+.heading {
+  padding: 20px;
+  background-color: rgb(132, 157, 185, 0.5);
+  /* border-radius: 100px; */
+  border-left: 20px solid #849db9;
+  border-top-right-radius: 100px;
+  border-bottom-right-radius: 100px;
+  padding-left: 10vw;
+  width: 45vw;
+}
+
+.biography {
+  background-color: rgba(206, 237, 244, 0.6);
+  min-height: 70vh;
+  height: auto;
+  display: grid;
+  grid-template-columns: 4fr 2fr;
+  padding: 5vh 5vw;
+  column-gap: 1vw;
+  justify-items: center;
+  align-items: center;
+}
+
+.biography > .biography-text {
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+}
+.biography-text > p {
+  font-size: large;
+}
+.biography-text > .biography-dob {
+  border-left: 0.2rem solid black;
+  padding: 0rem 0 0rem 0.8rem;
+  margin-left: -1rem;
+  margin-bottom: 1rem;
+}
+.biography-separator {
+  height: 0.1vh;
+  width: 2vw;
+  margin-bottom: 2vh;
+  background-color: black;
+}
+.link-effect {
+  text-align: center;
+  padding: 1.2vh 0;
+  margin-top: 2vh;
+  position: relative;
+}
+
+.link-effect:before,
+.link-effect:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: black;
+  transition: width 0.5s ease;
+}
+
+.link-effect:before {
+  left: 0;
+  bottom: 0;
+}
+
+.link-effect:after {
+  right: 0;
+  top: 0;
+}
+
+.link-effect:hover:before,
+.link-effect:hover:after {
+  width: 100%;
+}
+
+.biography > .biography-image {
+  padding: 10vh 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.biography-figure > img {
+  height: 50vh;
+}
+
+:root {
+  --timeline-bg: rgb(132, 157, 185);
+}
+.timeline {
+  width: 100vw;
+  position: relative;
+  padding: 5vh auto;
+  background-color: var(--timeline-bg);
+  padding-top: 10vh;
+  z-index: -1;
+}
+.timeline-heading {
+  text-align: center;
+  text-justify: center;
+  /* margin-top: 15px; */
+  display: inline-block;
+  width: 100vw;
+  padding-top: 40px;
+  /* border-radius: 10px; */
+  justify-self: center;
+  background-color: #849db9;
+  font-size: x-large;
+  font-weight: 600;
+}
+.container {
+  padding: 10px 50px;
+  position: relative;
+  width: 50%;
+  opacity: 0;
+  /* background-color: turquoise; */
+}
+
+@keyframes movedown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.circle-year {
+  height: 50px;
+  width: 50px;
+  border-radius: 10vh;
+  background-color: #fff;
+  position: absolute;
+  right: -25px;
+  top: 30%;
+  z-index: 2;
+  text-align: center;
+  align-content: center;
+}
+.text-box {
+  padding: 20px 30px;
+  background: #fff;
+  position: relative;
+  border-radius: 6px;
+  box-shadow: 2px 2px 15px 0px var(--timeline-bg);
+}
+.right-container {
+  left: 50%;
+}
+.timeline::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 100%;
+  background: #fff;
+  top: 10vh;
+  left: 50%;
+  margin-left: -3px;
+  z-index: -1;
+  animation: none;
+}
+.timeline.animate::after {
+  animation: moveline 1s linear forwards;
+}
+@keyframes moveline {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 100%;
+  }
+}
+
+.arrow {
+  height: 0;
+  width: 0;
+  position: absolute;
+  top: 40%;
+  z-index: 1;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+}
+.quote {
+  padding: 5vh 0;
+  text-align: center;
+  background-color: rgb(132, 157, 185);
+}
+strong {
+  font-weight: bold;
+}
+#name {
+  position: relative;
+  text-align: right;
+}
+.movies-list {
+  margin: auto;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #5b7ca1;
+}
+.movies-heading {
+  margin-top: 50px;
+  padding: 20px;
+  align-self: center;
+  font-size: xx-large;
+  font-weight: 600;
+}
+.slides {
+  padding: 20px;
+  width: 100%;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+.movies-container {
+  width: 100%;
+}
+.ticket-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-evenly;
+}
+.ticket__content {
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  border: 6px solid #d8d8d8;
+}
+.ticket {
+  position: relative;
+  box-sizing: border-box;
+  width: 300px;
+  height: 450px;
+  margin: 40px 10px;
+  padding: 2%;
+  border-radius: 10px;
+  background: #fbfbfb;
+  box-shadow: 2px 2px 15px 0px rgba(0, 0, 0, 0.5);
+
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    left: 5px;
+    height: 6px;
+    width: 290px;
+  }
+
+  &:before {
+    top: -5px;
+    background: radial-gradient(
+        circle,
+        transparent,
+        transparent 50%,
+        #fbfbfb 50%,
+        #fbfbfb 100%
+      ) -7px -8px / 16px 16px repeat-x;
+  }
+
+  &:after {
+    bottom: -5px;
+    background: radial-gradient(
+        circle,
+        transparent,
+        transparent 50%,
+        #fbfbfb 50%,
+        #fbfbfb 100%
+      ) -7px -2px / 16px 16px repeat-x;
+  }
+}
+.ticket-figure {
+  padding: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ticket-figure > img {
+  border-radius: 10px;
+}
+.ticket-figure-caption {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ticket img {
+  height: 246px;
+  margin-bottom: 10px;
+}
+.ticket6 img,
+.ticket7 img {
+  height: 246px;
+  margin-bottom: 3px;
+}
+
+footer {
+  width: 100vw;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-content: center;
+  justify-content: center;
+  font-size: 2rem;
+}
+h4 > svg {
+  height: 1.5rem;
+}
+
+.socials {
+  padding: 2vh;
+  display: flex;
+  text-align: center;
+  align-content: center;
+  justify-content: center;
+}
+.socials > div {
+  padding: 10px;
+}
+/* .ticket__text {
+  width: 400px;
+  font-family: "Helvetica", "Arial", sans-serif;
+  font-size: 3rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #c6dede;
+  transform: translate(-25px, 25px) rotate(-55deg);
+} */
+
+/* FOR BIG SCREENS */
+@media only screen and (min-width: 600px) {
+  nav {
+    min-height: 47px;
+  }
+  nav {
+    height: 4vh;
+  }
+  .heading {
+    min-width: 375px;
+  }
+  .to-hide-nav {
+    height: 4vh;
+  }
+  .biography > .biography-text {
+    max-width: 50vw;
+  }
+
+  .link-effect {
+    width: 14vw;
+  }
+  .left-container {
+    left: 0%;
+  }
+  .right-container > .circle-year {
+    left: -27px;
+  }
+  .left-container-arrow {
+    border-left: 15px solid #fff;
+    right: -14px;
+  }
+  .right-container-arrow {
+    border-right: 15px solid #fff;
+    left: -14px;
+  }
+}
+/* FOR MOBILES AND TABLETS */
+@media only screen and (max-width: 599px) {
+  * {
+    font-size: large;
+  }
+  nav > .overlay-content {
+    font-size: smaller;
+    gap: 0;
+    justify-content: space-around;
+  }
+  .overlay-content > a {
+    font-size: 3.5vw;
+    padding: 5px;
+  }
+  .heading {
+    width: 70vw;
+  }
+  .biography {
+    grid-template-rows: 10fr auto;
+    grid-template-columns: 2fr;
+  }
+  .biography > .biography-text {
+    width: 80vw;
+  }
+  .timeline {
+    padding-bottom: 70px;
+  }
+  .timeline::after {
+    left: 31px;
+  }
+  .container {
+    width: 100vw;
+    padding-left: 80px;
+    padding-right: 25px;
+    left: -14px;
+  }
+  .timeline-heading {
+    font-size: large;
+  }
+
+  .circle-year {
+    height: 45px;
+    width: 45px;
+    left: 23px;
+    top: 3vw;
+  }
+  .arrow {
+    display: none;
+  }
+  .quote {
+    padding: 5vh 5vw;
+  }
+}
