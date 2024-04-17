@@ -91,7 +91,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (hashedPassword === user.newpassword) {
         // Login successful
         console.log("Login Successfull");
-        window.location.href = "/secured-page"; // Redirect to secured page
+        window.location.href = "./secured-page"; // Redirect to secured page
       } else {
         console.error("Invalid credentials");
         alert("Invalid credentials. Please try again.");
