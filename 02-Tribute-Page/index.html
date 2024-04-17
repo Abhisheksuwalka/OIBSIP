@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- OG TAGS -->
+    <meta property="og:title" content="Sushant Singh Rajput" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="./assets/images/ssr-bg.jpg" />
+    <meta
+      property="og:url"
+      content="https://abhisheksuwalka.github.io/OIBSIP/02-Tribute-Page/index.html"
+    />
+    <meta
+      property="og:description"
+      content="Sushant Singh Rajput: A versatile Indian actor, astrophile, and polyglot whose talent transcended cinema, leaving an indelible mark on audiences worldwide."
+    />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="Tribute Page" />
+    <!-- title -->
+    <title>SSR Tribute Page</title>
+
+    <!-- font -->
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap");
+    </style>
+
+    <!-- css file -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <!-- Hamburger menu icon to open the navigation -->
+      <button class="openbtn" onclick="openNav()">
+        &#9776;
+        <span class="sr-only nav-tuggle-btn">Open Menu</span>
+        <!-- Screen reader-only text for accessibility -->
+      </button>
+
+      <!-- Navigation overlay -->
+      <nav
+        id="myNav"
+        class="overlay"
+        aria-labelledby="navTitle"
+        aria-hidden="true"
+      >
+        <h2 id="navTitle" class="sr-only">Navigation Menu</h2>
+        <!-- Screen reader-only title for accessibility -->
+        <!-- Close button for the navigation overlay -->
+        <button class="closebtn" onclick="closeNav()">
+          &times;
+          <span class="sr-only nav-tuggle-btn">Close Menu</span>
+          <!-- Screen reader-only text for accessibility -->
+        </button>
+
+        <!-- Navigation links -->
+        <div class="overlay-content">
+          <a href="#home">Home</a>
+          <a href="#biography">Biography</a>
+          <a href="#movies-list">Filmography</a>
+          <a href="#timeline">Timeline</a>
+          <a href="#me">Me</a>
+        </div>
+      </nav>
+    </header>
+    <!-- main information -->
+    <main id="home">
+      <div class="main-heading">
+        <!-- main page Heading -->
+        <div class="heading">
+          <h1 id="SSR" class="title-name">
+            <span class="highlight">Sushant</span> Singh Rajput
+          </h1>
+          <small>
+            Actor | <span class="highlight"> Engineer </span>| Dancer |
+            Astrophysicist
+          </small>
+        </div>
+      </div>
+      <!-- Page - 2 | Short Biography -->
+      <div class="biography" id="biography">
+        <div class="biography-text">
+          <div class="biography-dob">
+            <h2>Sushant Singh Rajput</h2>
+            <medium>Born on January 21, 1986</medium>
+          </div>
+          <div class="biography-separator"></div>
+          <p>
+            Sushant Singh Rajput was a true renaissance man, an Indian actor
+            whose boundless curiosity and passion transcended the realms of
+            cinema. While he etched his mark in Hindi films, his story was one
+            of defying conventions and shattering barriers.
+          </p>
+          <p>
+            Rajput's journey began on the small screen, where he captivated
+            audiences in popular serials like "Kis Desh Mein Hai Meraa Dil" and
+            "Pavitra Rishta." But the silver screen beckoned, and he made a
+            striking debut with "Kai Po Che!," earning a Filmfare nomination for
+            Best Male Debut.
+          </p>
+          <p>
+            From there, Rajput's career was a kaleidoscope of versatility. He
+            donned the hats of a romantic lead in "Shuddh Desi Romance," a sharp
+            detective in "Detective Byomkesh Bakshy!," and even a supporting
+            role that left an indelible impact in the satirical masterpiece
+            "PK."
+          </p>
+          <p>
+            Yet, his crowning achievement came when he embodied the spirit of
+            India's beloved cricketer, M.S. Dhoni, in the biopic "M.S. Dhoni:
+            The Untold Story." His transformative performance earned him a
+            well-deserved Filmfare nomination for Best Actor.
+          </p>
+          <p>
+            Rajput's on-screen magic continued to weave its spell in hits like
+            "Kedarnath" and "Chhichhore," but his true legacy extended far
+            beyond the confines of the cinema. An astrophile, he pursued his
+            passion for the cosmos by acquiring a Meade 14" LX600 telescope. A
+            polyglot, he mastered multiple languages, including Hindi, English,
+            Bengali, Greek, and Spanish, fueled by an insatiable thirst for
+            knowledge.
+          </p>
+          <p>
+            His untimely demise in 2020 left a void in the hearts of millions,
+            but his final film, "Dil Bechara," released posthumously, served as
+            a poignant reminder of his incredible talent and the lasting impact
+            he had on the world of entertainment and beyond.
+          </p>
+          <a
+            href="https://en.wikipedia.org/wiki/Sushant_Singh_Rajput"
+            id="wikipedia-tribute-link"
+            target="_blank"
+            class="link-effect"
+            >Sushant Singh Rajput on Wikipedia</a
+          >
+        </div>
+        <div class="biography-image">
+          <figure class="biography-figure">
+            <img
+              src="./assets/images/ssr-biography.jpg"
+              alt="Sushant Singh Rajput Black And White Image"
+            />
+          </figure>
+          <figcaption
+            class="biography-figure-caption"
+            id="biography-img-caption"
+          >
+            <h4 class="text-center highlight">Sushant Singh Rajput</h4>
+          </figcaption>
+        </div>
+      </div>
+      <div class="movies-list" id="movies-list">
+        <h3 class="movies-heading">
+          Here are outstanding movies by Sushant Singh Rajput
+        </h3>
+        <!-- LIST OF TICKETS  -->
+        <div class="slides" id="slides">
+          <div class="movies-container overflow">
+            <!--overflow -->
+            <div class="ticket-container inner">
+              <!-- inner -->
+              <div class="ticket ticket1">
+                <div class="ticket__content">
+                  <!-- <p class="ticket__text">Pure CSS Ticket</p> -->
+                  <figure class="ticket-figure">
+                    <img
+                      src="https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/dil-bechara-et00098454-26-06-2020-12-09-09.jpg"
+                      alt="dil bechara movie poster"
+                    />
+                  </figure>
+                  <figcaption class="ticket-figure-caption">
+                    <em>&#x1F3AC; Dil Bechara</em>
+                    <small>2019</small>
+                    <small>&#x2192; Manny</small>
+                  </figcaption>
+                </div>
+              </div>
+              <div class="ticket ticket2">
+                <div class="ticket__content">
+                  <!-- <p class="ticket__text">Pure CSS Ticket</p> -->
+                  <figure class="ticket-figure">
+                    <img
+                      src="https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/chhichhore-et00085935-16-10-2020-04-25-01.jpg"
+                      alt="Chhichhore movie poster"
+                    />
+                  </figure>
+                  <figcaption class="ticket-figure-caption">
+                    <em>&#x1F3AC; Chhichhore</em>
+                    <small>2019</small>
+                    <small>&#x2192; Anny</small>
+                  </figcaption>
+                </div>
+              </div>
+              <div class="ticket ticket3">
+                <div class="ticket__content">
+                  <!-- <p class="ticket__text">Pure CSS Ticket</p> -->
+                  <figure class="ticket-figure">
+                    <img
+                      src="https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/sonchiriya-et00070046-30-01-2018-10-25-52.jpg"
+                      alt="Sonchiriya movie poster"
+                    />
+                  </figure>
+                  <figcaption class="ticket-figure-caption">
+                    <em>&#x1F3AC; Sonchiriya</em>
+                    <small>2019</small>
+                    <small>&#x2192; Lakhna</small>
+                  </figcaption>
+                </div>
+              </div>
+              <div class="ticket ticket4">
+                <div class="ticket__content">
+                  <!-- <p class="ticket__text">Pure CSS Ticket</p> -->
+                  <figure class="ticket-figure">
+                    <img
+                      src="https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/kedarnath-et00059532-10-10-2020-08-55-39.jpg"
+                      alt="Kedarnath movie poster"
+                    />
+                  </figure>
+                  <figcaption class="ticket-figure-caption">
+                    <em>&#x1F3AC; Kedarnath</em>
+                    <small>2018</small>
+                    <small>&#x2192; Mansoor</small>
+                  </figcaption>
+                </div>
+              </div>
+              <div class="ticket ticket5">
+                <div class="ticket__content">
+                  <!-- <p class="ticket__text">Pure CSS Ticket</p> -->
+                  <figure class="ticket-figure">
+                    <img
+                      src="https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/raabta-et00042155-04-10-2016-03-32-40.jpg"
+                      alt="Raabta Movie Poster"
+                    />
+                  </figure>
+                  <figcaption class="ticket-figure-caption">
+                    <em>&#x1F3AC; Raabta</em>
+                    <small>2017</small>
+                    <small>&#x2192; Shiv</small>
+                  </figcaption>
+                </div>
+              </div>
+              <div class="ticket ticket6">
+                <div class="ticket__content">
+                  <!-- <p class="ticket__text">Pure CSS Ticket</p> -->
+                  <figure class="ticket-figure">
+                    <img
+                      src="https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/ms-dhoni-the-untold-story-et00025234-1683880914.jpg"
+                      alt="M.S. Dhoni: The Untold Story"
+                    />
+                  </figure>
+                  <figcaption class="ticket-figure-caption">
+                    <em>&#x1F3AC; M.S. Dhoni: The Untold Story</em>
+                    <small>2016</small>
+                    <small>&#x2192; M.S. Dhoni</small>
+                  </figcaption>
+                </div>
+              </div>
+              <div class="ticket ticket7">
+                <div class="ticket__content">
+                  <!-- <p class="ticket__text">Pure CSS Ticket</p> -->
+                  <figure class="ticket-figure">
+                    <img
+                      src="https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/detective-byomkesh-bakshy-et00019494-15-06-2020-05-39-09.jpg"
+                      alt="Detective Byomkesh Bakshy"
+                    />
+                  </figure>
+                  <figcaption class="ticket-figure-caption">
+                    <em>&#x1F3AC; Detective Byomkesh Bakshy</em>
+                    <small>2015</small>
+                    <small>&#x2192; Byomkesh Bakshy</small>
+                  </figcaption>
+                </div>
+              </div>
+              <div class="ticket ticket8">
+                <div class="ticket__content">
+                  <!-- <p class="ticket__text">Pure CSS Ticket</p> -->
+                  <figure class="ticket-figure">
+                    <img
+                      src="https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/pk-et00012381-15-06-2020-05-43-16.jpg"
+                      alt="PK"
+                    />
+                  </figure>
+                  <figcaption class="ticket-figure-caption">
+                    <em>&#x1F3AC; PK</em>
+                    <small>2014</small>
+                    <small>&#x2192; Sarfraz Yousuf</small>
+                  </figcaption>
+                </div>
+              </div>
+              <div class="ticket ticket9">
+                <div class="ticket__content">
+                  <!-- <p class="ticket__text">Pure CSS Ticket</p> -->
+                  <figure class="ticket-figure">
+                    <img
+                      src="https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/shuddh-desi-romance-et00015668-15-06-2020-05-27-50.jpg"
+                      alt="Shuddh Desi Romance"
+                    />
+                  </figure>
+                  <figcaption class="ticket-figure-caption">
+                    <em>&#x1F3AC; Shuddh Desi Romance</em>
+                    <small>2013</small>
+                    <small>&#x2192; Raghu</small>
+                  </figcaption>
+                </div>
+              </div>
+              <div class="ticket ticket10">
+                <div class="ticket__content">
+                  <!-- <p class="ticket__text">Pure CSS Ticket</p> -->
+                  <figure class="ticket-figure">
+                    <img
+                      src="https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/kai-po-che-et00010627-02-11-2020-03-59-23.jpg"
+                      alt="Kai Po Che"
+                    />
+                  </figure>
+                  <figcaption class="ticket-figure-caption">
+                    <em>&#x1F3AC; Dil Bechara</em>
+                    <small>2013</small>
+                    <small>&#x2192; Ishaan Bhatt</small>
+                  </figcaption>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Page - 4 Timeline -->
+      <h2 class="timeline-heading" id="timeline">
+        Here's a time line of Sushant Singh Rajput's life :
+      </h2>
+      <div class="timeline">
+        <div class="container left-container">
+          <div class="circle-year">
+            <span class="timeline-year">1986</span>
+          </div>
+          <div class="text-box">
+            <p>
+              He took his first breath in Patna, the vibrant capital of Bihar,
+              embarking on a journey that would captivate the world.
+            </p>
+            <span class="left-container-arrow arrow"></span>
+          </div>
+        </div>
+        <div class="container right-container">
+          <div class="circle-year">
+            <span class="timeline-year">2002</span>
+          </div>
+          <div class="text-box">
+            <p>
+              Following his mother's tragic departure, his family relocated to
+              Delhi, where Sushant Singh Rajput pursued his intermediate studies
+              at Kulachi Hansraj Model School.
+            </p>
+            <span class="right-container-arrow arrow"></span>
+          </div>
+        </div>
+        <div class="container left-container">
+          <div class="circle-year">
+            <span class="timeline-year">2006</span>
+          </div>
+          <div class="text-box">
+            <p>
+              During his fourth year of engineering, he made the bold decision
+              to abandon his course, heeding the call of the arts and
+              performance.
+            </p>
+            <span class="left-container-arrow arrow"></span>
+          </div>
+        </div>
+        <div class="container right-container">
+          <div class="circle-year">
+            <span class="timeline-year">2008</span>
+          </div>
+          <div class="text-box">
+            <p>
+              Sushant Singh Rajput's talent caught the eye of casting directors,
+              leading to an audition and his subsequent casting as the second
+              lead in the television series "Kis Desh Mein Hai Meraa Dil."
+            </p>
+            <span class="right-container-arrow arrow"></span>
+          </div>
+        </div>
+        <div class="container left-container">
+          <div class="circle-year">
+            <span class="timeline-year">2010</span>
+          </div>
+          <div class="text-box">
+            <p>
+              His exceptional performance earned him his first accolade, the
+              Best Actor award at the Indian Television Academy Awards.
+            </p>
+            <span class="left-container-arrow arrow"></span>
+          </div>
+        </div>
+        <div class="container right-container">
+          <div class="circle-year">
+            <span class="timeline-year">2010</span>
+          </div>
+          <div class="text-box">
+            <p>
+              He further cemented his status with three major television awards,
+              including Best Male Actor and Most Popular Actor.
+            </p>
+            <span class="right-container-arrow arrow"></span>
+          </div>
+        </div>
+        <div class="container left-container">
+          <div class="circle-year">
+            <span class="timeline-year">2011</span>
+          </div>
+          <div class="text-box">
+            <p>
+              Sushant Singh Rajput continued to captivate audiences in "Pavitra
+              Rishta" from its inception in 2009 until his exit in 2011.
+            </p>
+            <span class="left-container-arrow arrow"></span>
+          </div>
+        </div>
+        <div class="container right-container">
+          <div class="circle-year">
+            <span class="timeline-year">2011</span>
+          </div>
+          <div class="text-box">
+            <p>
+              Mukesh Chhabra, the casting director of "Kai Po Che!," recognized
+              Sushant Singh Rajput's potential and invited him for an audition.
+            </p>
+            <span class="right-container-arrow arrow"></span>
+          </div>
+        </div>
+        <div class="container left-container">
+          <div class="circle-year">
+            <span class="timeline-year">2013</span>
+          </div>
+          <div class="text-box">
+            <p>
+              "Kai Po Che!" hit the silver screen, becoming a commercial and
+              critical success, solidifying Sushant Singh Rajput's transition to
+              the big screen.
+            </p>
+            <span class="left-container-arrow arrow"></span>
+          </div>
+        </div>
+        <div class="container right-container">
+          <div class="circle-year">
+            <span class="timeline-year">2014</span>
+          </div>
+          <div class="text-box">
+            <p>
+              After garnering critical acclaim in Bollywood, Sushant Singh
+              Rajput made a special reappearance in the final episode of
+              "Pavitra Rishta," the show that launched his career.
+            </p>
+            <span class="right-container-arrow arrow"></span>
+          </div>
+        </div>
+        <div class="container left-container">
+          <div class="circle-year">
+            <span class="timeline-year">2014</span>
+          </div>
+          <div class="text-box">
+            <p>
+              His film "PK" shattered records, becoming the highest-grossing
+              Indian film of that year.
+            </p>
+            <span class="left-container-arrow arrow"></span>
+          </div>
+        </div>
+        <div class="container right-container">
+          <div class="circle-year">
+            <span class="timeline-year">2014</span>
+          </div>
+          <div class="text-box">
+            <p>
+              On September 25, 2014, Sushant Singh Rajput was announced as the
+              actor chosen to portray the legendary cricketer Dhoni in the
+              biopic "M.S. Dhoni: The Untold Story," directed by Neeraj Pandey.
+            </p>
+            <span class="right-container-arrow arrow"></span>
+          </div>
+        </div>
+        <div class="container left-container">
+          <div class="circle-year">
+            <span class="timeline-year">2015</span>
+          </div>
+          <div class="text-box">
+            <p>
+              "Detective Byomkesh Bakshy!" hit theaters on April 3, 2015, and
+              while it underperformed at the box office, it received positive
+              critical acclaim.
+            </p>
+            <span class="left-container-arrow arrow"></span>
+          </div>
+        </div>
+        <div class="container right-container">
+          <div class="circle-year">
+            <span class="timeline-year">2016</span>
+          </div>
+          <div class="text-box">
+            <p>
+              "M.S. Dhoni: The Untold Story," produced by Arun Pandey with Fox
+              Star Studios, was released on October 2, 2016, showcasing Sushant
+              Singh Rajput's remarkable transformation.
+            </p>
+            <span class="right-container-arrow arrow"></span>
+          </div>
+        </div>
+        <div class="container left-container">
+          <div class="circle-year">
+            <span class="timeline-year">2017</span>
+          </div>
+          <div class="text-box">
+            <p>
+              His rising stardom earned him a spot on the prestigious Forbes
+              India's Top 100 Celebrity list for the first time.
+            </p>
+            <span class="left-container-arrow arrow"></span>
+          </div>
+        </div>
+        <div class="container right-container">
+          <div class="circle-year">
+            <span class="timeline-year">2017</span>
+          </div>
+          <div class="text-box">
+            <p>
+              "Raabta," his next cinematic venture, graced the silver screen on
+              June 9, 2017.
+            </p>
+            <span class="right-container-arrow arrow"></span>
+          </div>
+        </div>
+        <div class="container left-container">
+          <div class="circle-year">
+            <span class="timeline-year">2018</span>
+          </div>
+          <div class="text-box">
+            <p>
+              Sushant Singh Rajput made a cameo appearance in the comedic film
+              "Welcome to New York," released on February 23, 2018.
+            </p>
+            <span class="left-container-arrow arrow"></span>
+          </div>
+        </div>
+        <div class="container right-container">
+          <div class="circle-year">
+            <span class="timeline-year">2019</span>
+          </div>
+          <div class="text-box">
+            <p>
+              His romantic comedy "Chhichhore," produced by Fox Star Studios and
+              Nadiadwala Grandson Entertainment, hit theaters on September 6,
+              2019, delighting audiences once again.
+            </p>
+            <span class="right-container-arrow arrow"></span>
+          </div>
+        </div>
+        <div class="container left-container">
+          <div class="circle-year">
+            <span class="timeline-year">2020</span>
+          </div>
+          <div class="text-box">
+            <p>
+              "Dil Bechara" marked his final on-screen appearance, a poignant
+              farewell to his devoted fans.
+            </p>
+            <span class="left-container-arrow arrow"></span>
+          </div>
+        </div>
+        <div class="container right-container">
+          <div class="circle-year">
+            <span class="timeline-year">2020</span>
+          </div>
+          <div class="text-box">
+            <p>
+              Tragically, Sushant Singh Rajput's journey came to an abrupt end
+              when he was found lifeless, hanging from the ceiling fan in his
+              Bandra, Mumbai residence.
+            </p>
+            <span class="right-container-arrow arrow"></span>
+          </div>
+        </div>
+      </div>
+      <div class="quote">
+        <strong id="qoute"
+          >""No matter what you achieve, what you want to aspire to be, or how
+          famous and powerful you become, the most important thing is whether
+          you are excited about each and every moment of your life because of
+          your work and people around you.""</strong
+        >
+        <p id="quote-by">~Sushant Singh Rajput</p>
+      </div>
+    </main>
+    <footer id="me">
+      <div class="footer-content">
+        <div class="my-name">
+          <h4 class="text-center p-5">
+            Made with
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+              <path
+                d="M225.8 468.2l-2.5-2.3L48.1 303.2C17.4 274.7 0 234.7 0 192.8v-3.3c0-70.4 50-130.8 119.2-144C158.6 37.9 198.9 47 231 69.6c9 6.4 17.4 13.8 25 22.3c4.2-4.8 8.7-9.2 13.5-13.3c3.7-3.2 7.5-6.2 11.5-9c0 0 0 0 0 0C313.1 47 353.4 37.9 392.8 45.4C462 58.6 512 119.1 512 189.5v3.3c0 41.9-17.4 81.9-48.1 110.4L288.7 465.9l-2.5 2.3c-8.2 7.6-19 11.9-30.2 11.9s-22-4.2-30.2-11.9zM239.1 145c-.4-.3-.7-.7-1-1.1l-17.8-20c0 0-.1-.1-.1-.1c0 0 0 0 0 0c-23.1-25.9-58-37.7-92-31.2C81.6 101.5 48 142.1 48 189.5v3.3c0 28.5 11.9 55.8 32.8 75.2L256 430.7 431.2 268c20.9-19.4 32.8-46.7 32.8-75.2v-3.3c0-47.3-33.6-88-80.1-96.9c-34-6.5-69 5.4-92 31.2c0 0 0 0-.1 .1s0 0-.1 .1l-17.8 20c-.3 .4-.7 .7-1 1.1c-4.5 4.5-10.6 7-16.9 7s-12.4-2.5-16.9-7z"
+              />
+            </svg>
+            By
+            <a
+              href="https://github.com/Abhisheksuwalka"
+              target="_blank"
+              class="highlight"
+              >Abhishek Suwalka
+            </a>
+          </h4>
+        </div>
+      </div>
+      <div class="socials">
+        <div class="icons linkedin">
+          <a href="https://www.linkedin.com/in/abhisheksuwalka/">
+            <img src="./assets/images/linkedin.png" alt="linkedin icon" />
+          </a>
+        </div>
+        <div class="icons twitter">
+          <a href="https://twitter.com/maik0z">
+            <img src="./assets/images/twitter.png" alt="twitter icon" />
+          </a>
+        </div>
+        <div class="icons fb">
+          <a href="https://github.com/Abhisheksuwalka">
+            <img src="./assets/images/github-logo.png" alt="github icon" />
+          </a>
+        </div>
+        <div class="icons yt">
+          <a href="https://www.youtube.com/@abhisheksuwalka2487">
+            <img src="./assets/images/youtube.png" alt="youtube icon" />
+          </a>
+        </div>
+        <!-- <div class="icons theme" id="changeTheme">
+          <img src="./assets/images/change-mode.png" alt="change mode icon" />
+        </div> -->
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
