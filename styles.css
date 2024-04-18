@@ -1,0 +1,71 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #551a8b;
+}
+
+body {
+  /* height: 100vh; */
+  /* background-color: #f5f5f5; */
+  background-color: rgb(238, 214, 247);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+h1 {
+  padding: 20px;
+  margin: 30px;
+}
+a {
+  text-decoration: none;
+}
+.projectslist > ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+li {
+  list-style-type: none;
+  margin: 20px;
+}
+.project {
+  height: 300px;
+  width: 200px;
+  border-right-color: rgb(255, 250, 250);
+  border-radius: 30px;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+figure {
+  text-align: center;
+  font-size: xx-large;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+.myname {
+  margin-top: 50px;
+}
+
+.socials {
+  margin: 10px;
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  background-color: transparent;
+  border-radius: 40px;
+  box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.25);
+}
+
+.socials > div {
+  margin: 3px;
+}
